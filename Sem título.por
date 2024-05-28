@@ -1,16 +1,19 @@
 programa {
   funcao inicio() {
-    inteiro numero1, numero2, soma
- 
+    inteiro numero1, numero2, numero3 
+    real media
 
-    escreva("escreva um numero: ")
+
+    escreva("escreva um numero:")
     leia(numero1)
 
-    escreva("escreva outro numero: ")
+    escreva("escreva mais um numero:")
     leia(numero2)
 
-    soma = numero1 + numero2
+    escreva("escreva o ultimo numero:")
+    leia(numero3)
 
-    escreva(soma)
+    media= (numero1 + numero2 + numero3)/3
+    escreva("media: ",media)
   }
 }
