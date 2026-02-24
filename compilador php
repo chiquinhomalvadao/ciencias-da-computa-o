@@ -1,0 +1,69 @@
+<?php
+$var1 = 10; 
+$var2 = 5;  
+
+echo $var1 + $var2;
+?>
+
+<?php
+$a = 15; 
+$b = 5;  
+
+echo $a - $b;
+?>
+
+<?php
+$a = 4; 
+$b = 6; 
+
+
+echo $a * $b;
+?>
+
+<?php
+$a = 20;  
+$b = 4;   
+
+echo $a / $b;
+?>
+
+<?php
+$a = 17;
+$b = 5; 
+
+echo $a % $b;
+?>
+
+<?php
+$nota1 = 7;  
+$nota2 = 9;  
+
+$media = ($nota1 + $nota2) / 2;
+
+echo "A média é: " . $media;
+?>
+
+<?php
+$largura = 5;  
+$altura = 8;  
+$area = $largura * $altura;
+
+echo "A área do retângulo é: " . $area;
+?>
+
+<?php
+$metros = 3;  
+
+$centimetros = $metros * 100;
+
+echo "O valor em centímetros é: " . $centimetros;
+?>
+
+<?php
+$preco = 50;
+$quantidade = 3;  
+
+$valor_total = $preco * $quantidade;
+
+echo "O valor total da compra é: R$ " . $valor_total;
+?>
