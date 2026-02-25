@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	float a;
+	float b;
+	float soma;
+	printf("Olá \n");
+	printf("digite um numero \n");
+	scanf("%f", &a);
+	printf("digite outro numero \n");
+	scanf("%f", &b);
+	soma= a+b;
+	printf("A soma e%f \n",soma);
+	printf("a subtração e%f \n",a-b);
+	printf("a multiplicacao e e%f \n",a*b);
+	printf("a divisao e%f \n",a/b);
+	return 0;
+}
