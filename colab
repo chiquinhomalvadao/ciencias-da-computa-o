@@ -1,0 +1,7 @@
+import matplotlib.pyplot as plt
+categorias = ['a', 'b', 'c', 'd']
+valores = [10, 20, 15, 25]
+
+plt.bar(categorias, valores, color='green')
+plt.title ("grafico de barras")
+plt.show()
