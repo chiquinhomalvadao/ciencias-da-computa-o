@@ -1,9 +1,17 @@
-import matplotlib.pyplot as plt
+import cmatplotlib.pyplot as plt
 
 categorias = ['laranja', 'maçã', 'melão', 'melancia', 'banana', 'kiwi', 'pera', 'kaki', 'tangirina', 'goiaba']
 valores = [4182, 3866, 3842, 4252, 4167,3991, 3837, 3524, 3735, 3424]
-cores = plt.cm.viridis([i/10 for i in range(10)])
+cores = plt.cm.viridis([1/10 for i in range(10)])
 
 plt.figure(figsize=(12, 6))
 bars = plt.bar(categorias, valores, color=cores, edgecolor='black', linewidth=0.7)
+
+plt.title('performance de vendas por departamento (trimestre)', fontsize=14, fontweight='bold', pad=20)
+plt.ylabel('volume (em milhares)', fontsize=12)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+for bar in bars:
+  yval = bar.get_height()
+  plt.text(bar.get_x() + bar.get_width()/2, yval, f'{yval}', ha='center', va= 'bottom', fontweight='bold')
+plt.show()
 
