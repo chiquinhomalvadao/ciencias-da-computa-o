@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt
+
+categorias = ['laranja', 'maçã', 'melão', 'melancia', 'banana', 'kiwi', 'pera', 'kaki', 'tangirina', 'goiaba']
+valores = [4182, 3866, 3842, 4252, 4167,3991, 3837, 3524, 3735, 3424]
+cores = plt.cm.viridis([i/10 for i in range(10)])
+
+plt.figure(figsize=(12, 6))
+bars = plt.bar(categorias, valores, color=cores, edgecolor='black', linewidth=0.7)
+
