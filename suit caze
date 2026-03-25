@@ -1,0 +1,41 @@
+run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int i, opcao;
+	float n1, n2, resultado;
+	for(i=0; i<5; i++){
+	printf("calculadora \n");
+	printf("1-soma \n");
+	printf("2-subtração \n");
+	printf("3-multiplicação \n");
+	printf("4-divisão \n");
+	printf("0-saida \n");
+	printf("digite sua opcao \n");
+	scanf("%d", &opcao);
+	printf("numero1 \n");
+	scanf("%f",&n1);
+	printf("numero2 \n");
+	scanf("%f", &n2);
+	switch(opcao){
+		case 1;
+		resultado=n1+n2;
+		printf("o resultado %.2f. \n", resultado);
+		break;
+		case 2;
+		resultado=n1-n2;#include <stdio.h>
+		printf("o resultado %.2f. \n", resultado);
+		break;
+		case 3;
+		resultado=n1*n2;
+		printf("o resultado %.2f. \n", resultado);
+		break;
+		case 4;
+		resultado=n1/n2;
+		printf("o resultado %.2f. \n", resultado);
+		break;
+		case 0;
+		break;
+	}
+	}
+	return 0;		
+}
