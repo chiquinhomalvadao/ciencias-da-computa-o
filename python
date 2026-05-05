@@ -1,3 +1,4 @@
+
 qprod = int(input("Quantos produtos você quer cadastrar?\n"))
 
 total = 0
@@ -29,12 +30,16 @@ for i in range(qprod):
     if valor < 50:
         menor_q_50 = menor_q_50 + 1
 
-media = total / qprod
+# cálculo da média usando apenas if
+if qprod > 0:
+    media = total / qprod
+if qprod == 0:
+    media = 0
 
 print("\nRESULTADO FINAL")
 print("Valor total:", total)
 print("Média:", media)
 print("Produtos maiores que 100:", maior_q_100)
 print("Produtos menores que 50:", menor_q_50)
-print("Produto mais caro:", nomecaro)
-print("Produto mais barato:", nomebarato)
+print("Produto mais caro:", nomecaro, "-", maiscaro)
+print("Produto mais barato:", nomebarato, "-", maisbarato)
