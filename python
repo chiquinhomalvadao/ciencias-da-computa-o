@@ -1,43 +1,40 @@
-qprod=int(input("Quantos produtos você quer cadastrar? \n"));
-nomeprod=""
-valor=0
-total=0
-maiscaro=0
-half=0
-maisbarato=9999999999999999
-nomecaro=""
-maior_q_100=0
-menor_q_50=0
-nomebarato=""
-a=0
+qprod = int(input("Quantos produtos você quer cadastrar?\n"))
 
-for i in range (qprod):
-    a=a+1
-    print("Produto", a)
-    nomeprod=input("Qual o nome produto?")
-    valor=int(input("Qual o valor do produto?"))
+total = 0
+maiscaro = 0
+maisbarato = 999999999
+nomecaro = ""
+nomebarato = ""
+maior_q_100 = 0
+menor_q_50 = 0
+
+for i in range(qprod):
+    print("Produto", i+1)
+    nomeprod = input("Qual o nome do produto? ")
+    valor = int(input("Qual o valor do produto? "))
 
     total = total + valor
 
-    if maiscaro<valor:
+    if valor > maiscaro:
         maiscaro = valor
         nomecaro = nomeprod
 
-    if maisbarato>valor:
+    if valor < maisbarato:
         maisbarato = valor
         nomebarato = nomeprod
 
-    if valor>100:
-        maior_q_100=maior_q_100+1
+    if valor > 100:
+        maior_q_100 = maior_q_100 + 1
 
-    if valor<50:
-        menor_q_50=menor_q_50+1
+    if valor < 50:
+        menor_q_50 = menor_q_50 + 1
 
-    half=total/qprod
+media = total / qprod
 
-    print("O valor total é:", total)
-    print("A média de vendas é:", half)
-    print("A quantidade de produtos menor que 50 é:", menor_q_50)
-    print("A quantidade de produtos maior que 100 é:", maior_q_100)
-    print("O produto com menor valor foi:", nomebarato)
-    print("O produto com maior valor foi:", nomecaro)
+print("\nRESULTADO FINAL")
+print("Valor total:", total)
+print("Média:", media)
+print("Produtos maiores que 100:", maior_q_100)
+print("Produtos menores que 50:", menor_q_50)
+print("Produto mais caro:", nomecaro)
+print("Produto mais barato:", nomebarato)
