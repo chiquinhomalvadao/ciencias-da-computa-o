@@ -1,0 +1,85 @@
+qgastos = int(input("Quantos gastos deseja cadastrar? "))
+orcamento = float(input("Qual o valor do orçamento do mês? ").replace(",", "."))
+
+total = 0
+maior = 0
+menor = 999999999
+maior_gasto = ""
+menor_gasto = ""
+
+alimentacao = 0
+transporte = 0
+lazer = 0
+estudo = 0
+outros = 0
+
+for i in range(qgastos):
+    print("\nGasto", i + 1)
+
+    nome = input("Nome do gasto: ")
+    valor = float(input("Valor do gasto: ").replace(",", "."))
+
+    print("Categorias:")
+    print("1 - Alimentação")
+    print("2 - Transporte")
+    print("3 - Lazer")
+    print("4 - Estudo")
+    print("5 - Outros")
+
+    categoria = input("Escolha a categoria: ")
+
+    total = total + valor
+
+    if categoria == "1":
+        alimentacao = alimentacao + valor
+
+    if categoria == "2":
+        transporte = transporte + valor
+
+    if categoria == "3":
+        lazer = lazer + valor
+
+    if categoria == "4":
+        estudo = estudo + valor
+
+    if categoria == "5":
+        outros = outros + valor
+
+    if valor > maior:
+        maior = valor
+        maior_gasto = nome
+
+    if valor < menor:
+        menor = valor
+        menor_gasto = nome
+
+if qgastos > 0:
+    media = total / qgastos
+
+if qgastos == 0:
+    media = 0
+
+print("\n===== RESULTADO FINAL =====")
+
+print("Total gasto no mês:", total)
+
+print("\nGastos por categoria")
+print("Alimentação:", alimentacao)
+print("Transporte:", transporte)
+print("Lazer:", lazer)
+print("Estudo:", estudo)
+print("Outros:", outros)
+
+print("\nMaior gasto registrado:")
+print(maior_gasto, "-", maior)
+
+print("\nMenor gasto registrado:")
+print(menor_gasto, "-", menor)
+
+print("\nMédia de gastos:", media)
+
+if total > orcamento:
+    print("\nA pessoa passou do orçamento.")
+
+if total <= orcamento:
+    print("\nA pessoa NÃO passou do orçamento.")
